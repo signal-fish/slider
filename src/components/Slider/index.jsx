@@ -8,7 +8,7 @@ const Slider = ({ people, index, prevSlide, nextSlide }) => {
     <Container>
       <Left>
         <Button onClick={() => prevSlide()}>
-          <FiChevronLeft />
+          prev
         </Button>
       </Left>
       <Center>
@@ -37,7 +37,7 @@ const Slider = ({ people, index, prevSlide, nextSlide }) => {
       </Center>
       <Right>
         <Button onClick={() => nextSlide()}>
-          <FiChevronRight />
+          next
         </Button>
       </Right>
     </Container>
@@ -64,16 +64,19 @@ const Button = styled.button`
   width: 50px;
   border-radius: 5px;
   background: #7bcce7;
-  font-size: 30px;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
     opacity: 0.8;
   }
+
 
 `;
 
