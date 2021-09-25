@@ -7,8 +7,8 @@ const Slider = ({ people, index, prevSlide, nextSlide }) => {
   return (
     <Container>
       <Left>
-        <Button>
-          <FiChevronLeft onClick={() => prevSlide()} />
+        <Button onClick={() => prevSlide()}>
+          <FiChevronLeft />
         </Button>
       </Left>
       <Center>
@@ -36,8 +36,8 @@ const Slider = ({ people, index, prevSlide, nextSlide }) => {
         })}
       </Center>
       <Right>
-        <Button>
-          <FiChevronRight onClick={() => nextSlide()} />
+        <Button onClick={() => nextSlide()}>
+          <FiChevronRight />
         </Button>
       </Right>
     </Container>
@@ -51,7 +51,7 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
+flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,10 +75,6 @@ const Button = styled.button`
     opacity: 0.8;
   }
 
-  ${mobile({
-    width: "35px",
-    height: "35px"
-  })}
 `;
 
 const Center = styled.div`
@@ -176,7 +172,7 @@ const Text = styled.p`
 `;
 
 const Right = styled.div`
-  flex: 1;
+flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
